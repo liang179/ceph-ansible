@@ -190,6 +190,19 @@ dmcrypt_journal_collocation: false
 # You must use raw_journal_devices and set your journal devices
 dmcrypt_dedicated_journal: false
 
+# VII. Use ceph-volume to create OSDs from logical volumes.
+# Use 'lvm_osds:true' to enable this scenario. Currently we only support dedicated journals
+# when using lvm, not collocated journals.
+# lvm_volumes is a dictionary whose key/value pair represent a data lv and a journal pair.
+# Journals can be either a lv, device or partition. You can not use the same journal for many data lvs.
+# For example:
+# lvm_volumes:
+#   data-lv1: journal-lv1
+#   data-lv2: /dev/sda
+#   data:lv3: /dev/sdb1
+lvm_osds: false
+lvm_volumes: {}
+
 
 ##########
 # DOCKER #
