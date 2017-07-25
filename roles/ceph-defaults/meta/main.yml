@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Sébastien Han
-  description: Installs Ceph Rados Gateway
+  description: Handles ceph-ansible default vars for all roles
   license: Apache
   min_ansible_version: 1.7
   platforms:
@@ -10,5 +10,4 @@ galaxy_info:
         - trusty
   categories:
     - system
-dependencies:
-  - { role: ceph.ceph-common }
+dependencies: []
